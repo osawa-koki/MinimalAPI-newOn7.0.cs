@@ -10,4 +10,10 @@ docker build ./ -t dotnet7
 
 # 作成されたコンテナを実行
 docker run -it dotnet7
+
+# ディレクトリを移動して
+cd MinimalAPI-newOn7.0.cs
+
+# .NETプロジェクトをデバグ実行
+dotnet run
 ```
