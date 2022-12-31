@@ -13,6 +13,30 @@ docker run -p 80:80 -it --rm --name my-new-at-dotnet7 new-at-dotnet7
 docker build -t new-at-dotnet7 . && docker run -p 80:80 -it --rm --name my-new-at-dotnet7 new-at-dotnet7
 ```
 
+## 動作確認
+
+以下のパスにアクセスする。  
+
+- /tags?q=1&q=2&q=3
+- /tags2?names=john&names=jack&names=jane
+- /tags3?names=john&names=jack&names=jane
+- /todo/A
+- /todo/B
+- /todo/C
+
+## デプロイ設定(Render.com)
+
+| キー | バリュー |
+| ---- | ---- |
+| Name | new-at-dotnet7 |
+| Region | Oregon(US West) |
+| Branch | main |
+| Root Directory |  |
+| Environment | Docker |
+| Dockerfile Path | ./Dockerfile |
+| Docker Build Context Directory |  |
+| Docker Command |  |
+
 ## 参考文献
 
 - <https://learn.microsoft.com/ja-jp/aspnet/core/release-notes/aspnetcore-7.0?view=aspnetcore-7.0>
