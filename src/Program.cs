@@ -16,7 +16,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+app.MapGet("/", () => "Hello World 👍👍👍");
 
 // ===== ===== ===== ===== =====
 // 配列へのバインディング
@@ -43,4 +43,4 @@ todo.MapGet("/A", () => new[] { "A1", "A2", "A3" });
 todo.MapGet("/B", () => new[] { "B1", "B2", "B3" });
 todo.MapGet("/C", () => new[] { "C1", "C2", "C3" });
 
-app.Run();
+app.Run("http://+:80");
